@@ -299,6 +299,93 @@ section::before {
     }
 }
 
+/* Contact section */
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    margin: 2rem auto;
+    max-width: 600px;
+    padding: 2rem;
+    background: rgba(0, 255, 0, 0.05);
+    border-radius: 15px;
+    border: 1px solid var(--primary-color);
+    position: relative;
+}
+
+.contact-container::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, var(--primary-color), transparent, var(--primary-color));
+    border-radius: 16px;
+    z-index: -1;
+    animation: borderGlow 3s linear infinite;
+}
+
+@keyframes borderGlow {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    background: rgba(0, 255, 0, 0.1);
+    border-radius: 10px;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateY(-3px);
+    background: rgba(0, 255, 0, 0.15);
+    box-shadow: 0 5px 15px rgba(0, 255, 0, 0.2);
+}
+
+.contact-icon {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+.contact-link {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-family: 'Courier New', monospace;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.contact-link:hover {
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
+    color: #fff;
+}
+
+/* Responsive design for contact */
+@media (max-width: 768px) {
+    .contact-container {
+        padding: 1.5rem;
+    }
+
+    .contact-item {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .contact-link {
+        font-size: 1rem;
+    }
+}
+
 /* Scrollbar styling */
 ::-webkit-scrollbar {
     width: 10px;

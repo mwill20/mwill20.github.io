@@ -13,4 +13,4 @@ This is the personal website of Michael Williams. It includes sections for about
 - `script.js`: JavaScript file for interactivity.
 
 ## Contact
-You can reach me at: michael@example.com
+You can reach me at: mwill.itmission@gmail.com

@@ -3,149 +3,214 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css?v=1">
     <title>Michael Williams - Personal Website</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #0f0;
+            font-family: 'Courier New', monospace;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .profile-container {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .profile-image img {
+            width: 200px;
+            height: auto;
+            border: 2px solid #0f0;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .project-card {
+            border: 1px solid #0f0;
+            padding: 15px;
+            background-color: #000;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: auto;
+            border: 1px solid #0f0;
+        }
+
+        .tech-tag {
+            display: inline-block;
+            padding: 2px 8px;
+            margin: 2px;
+            border: 1px solid #0f0;
+            border-radius: 3px;
+        }
+
+        .project-links a {
+            color: #0f0;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .contact-icon {
+            font-size: 24px;
+            margin-right: 10px;
+            color: #0f0;
+        }
+
+        .contact-info a {
+            color: #0f0;
+            text-decoration: none;
+        }
+
+        h1, h2, h3 {
+            color: #0f0;
+            border-bottom: 1px solid #0f0;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to Michael Williams' Website</h1>
+        <h1>Michael Williams</h1>
         <nav>
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <a href="#about">About</a> |
+            <a href="#projects">Projects</a> |
+            <a href="#contact">Contact</a>
         </nav>
     </header>
+
     <main>
         <section id="about">
             <h2>About Me</h2>
             <div class="profile-container">
                 <div class="profile-image">
-                    <img src="images/profile.jpg" alt="Michael Williams" class="profile-pic">
+                    <img src="images/profile.jpg" alt="Michael Williams">
                 </div>
                 <div class="about-content">
                     <h3>Cybersecurity Analyst II at 11:11 Systems</h3>
-                    <p>I'm a Security Analyst specializing in investigating, triaging, and resolving security alerts. With hands-on experience using industry-leading tools like SIEM, EDR, CRS, and SOAR, I ensure our customers' networks remain secure and protected.</p>
-                    
-                    <p>My expertise includes:</p>
+                    <p>Security Analyst specializing in investigating, triaging, and resolving security alerts.</p>
+                    <p>Expertise includes:</p>
                     <ul>
-                        <li>Deep investigation of potential intrusion tactics, techniques, and procedures (TTPs)</li>
-                        <li>Alignment with MITRE ATT&CK framework</li>
+                        <li>Deep investigation of potential intrusion TTPs</li>
+                        <li>MITRE ATT&CK framework alignment</li>
                         <li>Incident response and threat hunting</li>
                         <li>Security analysis and process improvement</li>
                     </ul>
-
-                    <p>With 17 current cybersecurity certifications, I'm actively pursuing growth in:</p>
-                    <ul>
-                        <li>Security Engineering</li>
-                        <li>AI/ML Engineering</li>
-                        <li>AI Alignment and Governance</li>
-                        <li>AI Security</li>
-                    </ul>
-
-                    <p>I believe in making security accessible through clear communication, delivering technical insights in an actionable, user-friendly manner. My commitment to staying current with security trends ensures I'm always prepared to tackle emerging cyber threats.</p>
                 </div>
             </div>
         </section>
+
         <section id="projects">
             <h2>Projects</h2>
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/security-camera.png" alt="Smart Security Camera Project">
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/Spam_Phishing_Email_Detector.jpg" alt="Spam Detection Project">
+                    </div>
+                    <h3>AI-Powered Spam & Phishing Detector</h3>
+                    <p>Machine learning solution combining BERT with rule-based detection.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">PyTorch</span>
+                        <span class="tech-tag">BERT</span>
+                        <span class="tech-tag">ML</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/mwill20/spam-phishing-detector">View Code</a>
+                    </div>
                 </div>
-                <div class="project-content">
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/security-camera.jpg.png" alt="Security Camera Project">
+                    </div>
                     <h3>Smart Security Camera</h3>
-                    <p>An intelligent security system featuring face detection, motion tracking, and remote monitoring capabilities. Built with Python and OpenCV, it includes a web interface for real-time surveillance and customizable alerts.</p>
+                    <p>Intelligent security system with face detection and motion tracking.</p>
                     <div class="tech-tags">
                         <span class="tech-tag">Python</span>
                         <span class="tech-tag">OpenCV</span>
                         <span class="tech-tag">Flask</span>
-                        <span class="tech-tag">Computer Vision</span>
-                        <span class="tech-tag">Face Detection</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/mwill20/Camera_Alarm" target="_blank">View Code</a>
-                        <a href="https://github.com/mwill20/Camera_Alarm/blob/main/README.md" target="_blank">Documentation</a>
+                        <a href="https://github.com/mwill20/Camera_Alarm">View Code</a>
                     </div>
                 </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/huggingface-sentiment.jpg" alt="HuggingFace Sentiment Analysis Project">
-                </div>
-                <div class="project-content">
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/huggingface-sentiment-analysis.jpg" alt="Sentiment Analysis">
+                    </div>
                     <h3>HuggingFace Sentiment Analysis</h3>
-                    <p>Building and Training a Neural Network to Decode Emotions using PyTorch. This project leverages HuggingFace's powerful models to classify sentiments in text data.</p>
+                    <p>Neural Network for emotion detection in text using PyTorch.</p>
                     <div class="tech-tags">
                         <span class="tech-tag">PyTorch</span>
                         <span class="tech-tag">HuggingFace</span>
-                        <span class="tech-tag">AutoModelForSequenceClassification</span>
-                        <span class="tech-tag">AutoTokenizer</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://colab.research.google.com/drive/12K_B9MwoLgD8ClgaBgO9Zhsd1XB-KAew" target="_blank">Open in Colab</a>
-                    </div>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/xgboost-model.jpg" alt="XGBoost Regressor Project">
-                </div>
-                <div class="project-content">
-                    <h3>XGBoost Regressor</h3>
-                    <p>Explore the power of the XGBoost algorithm for regression tasks, showcasing its ability to handle complex datasets and deliver accurate predictions.</p>
-                    <div class="tech-tags">
-                        <span class="tech-tag">Pandas</span>
-                        <span class="tech-tag">Scikit-learn</span>
-                        <span class="tech-tag">XGBoost</span>
-                        <span class="tech-tag">K-Fold Cross-Validation</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://colab.research.google.com/drive/1Zmy7XETO1ACYSPsaYmg-QViWimy8nPAB" target="_blank">Open in Colab</a>
-                    </div>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/foundation-model-spam.jpg" alt="Foundation Model Spam Classifier Project">
-                </div>
-                <div class="project-content">
-                    <h3>Foundation Model Spam Classifier</h3>
-                    <p>Advanced spam detection system leveraging state-of-the-art foundation models to accurately classify and filter unwanted messages. This project demonstrates the power of modern NLP techniques in real-world applications.</p>
-                    <div class="tech-tags">
-                        <span class="tech-tag">PyTorch</span>
-                        <span class="tech-tag">Transformers</span>
                         <span class="tech-tag">NLP</span>
-                        <span class="tech-tag">Machine Learning</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://colab.research.google.com/drive/1LcapWSDqyTBHBwn5Wiop-sBx6mBsyePt" target="_blank">Open in Colab</a>
+                        <a href="https://colab.research.google.com/drive/12K_B9MwoLgD8ClgaBgO9Zhsd1XB-KAew">Open in Colab</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/XGBoost.jpg" alt="XGBoost Project">
+                    </div>
+                    <h3>XGBoost Regressor</h3>
+                    <p>Advanced regression analysis using XGBoost algorithm.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">XGBoost</span>
+                        <span class="tech-tag">ML</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://colab.research.google.com/drive/1Zmy7XETO1ACYSPsaYmg-QViWimy8nPAB">Open in Colab</a>
                     </div>
                 </div>
             </div>
         </section>
+
         <section id="contact">
             <h2>Contact</h2>
             <div class="contact-container">
                 <div class="contact-item">
-                    <i class="contact-icon">📧</i>
-                    <a href="mailto:mwill.systems@gmail.com" class="contact-link">mwill.systems@gmail.com</a>
+                    <span class="contact-icon">📧</span>
+                    <div class="contact-info">
+                        <a href="mailto:mwill.itmission@gmail.com">mwill.itmission@gmail.com</a>
+                    </div>
                 </div>
                 <div class="contact-item">
-                    <i class="contact-icon">📱</i>
-                    <a href="tel:+12064740889" class="contact-link">(206) 474-0889</a>
+                    <span class="contact-icon">📱</span>
+                    <div class="contact-info">
+                        <a href="tel:+12064740889">(206) 474-0889</a>
+                    </div>
                 </div>
                 <div class="contact-item">
-                    <i class="contact-icon">💼</i>
-                    <a href="https://www.linkedin.com/in/mwillitmission/" target="_blank" class="contact-link">LinkedIn Profile</a>
+                    <span class="contact-icon">💼</span>
+                    <div class="contact-info">
+                        <a href="https://www.linkedin.com/in/mwillitmission/" target="_blank">LinkedIn Profile</a>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
+
     <footer>
         <p>&copy; 2024 Michael Williams</p>
     </footer>
-    <script src="script.js"></script>
 </body>
 </html>

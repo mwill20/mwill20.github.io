@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCP Core Server & AI Model Hub - Michael Williams</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #0f0;
+            font-family: 'Courier New', monospace;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        /* ... (all other styles from your index.html's inline style block) ... */
+        .profile-container { display: flex; align-items: flex-start; gap: 20px; margin: 20px 0; }
+        .profile-image img { width: 200px; height: auto; border: 2px solid #0f0; }
+        .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0; }
+        .project-card { border: 1px solid #0f0; padding: 15px; background-color: #000; }
+        .project-image { height: 250px; overflow: hidden; border: 1px solid #0f0; margin-bottom: 15px; }
+        .project-image img { width: 100%; height: 100%; object-fit: cover; border: none; }
+        .tech-tag { display: inline-block; padding: 2px 8px; margin: 2px; border: 1px solid #0f0; border-radius: 3px; }
+        .project-links a { color: #0f0; text-decoration: none; margin-right: 10px; }
+        .contact-item { display: flex; align-items: center; margin-bottom: 20px; }
+        .contact-icon { font-size: 24px; margin-right: 10px; color: #0f0; }
+        .contact-info a { color: #0f0; text-decoration: none; }
+        h1, h2, h3 { color: #0f0; border-bottom: 1px solid #0f0; }
+        .project-detail-container { padding: 20px; border: 1px solid #0f0; margin-top: 20px; }
+        .project-detail-container h2 { margin-top: 0; }
+        .project-detail-container ul { list-style-type: square; padding-left: 20px; }
+        .project-detail-container a { color: #0f0; }
+        .project-detail-container code { background-color: #111; color: #0f0; padding: 2px 4px; border: 1px solid #0a0; border-radius: 3px;}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Michael Williams</h1>
+        <nav>
+            <a href="index.html#about">About</a> |
+            <a href="index.html#projects">Projects</a> |
+            <a href="index.html#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="project-detail">
+            <div class="project-detail-container">
+                <h2>MCP Core Server & AI Model Hub</h2>
+                
+                <p>
+                    This project is the central backend server, built with Python, that implements the <strong>Model Context Protocol (MCP)</strong>. It's designed to host and serve various AI models, such as the <code>Qwen/Qwen2-72B-Instruct</code> model for sentiment analysis, making them accessible via the MCP. 
+                </p>
+                <p>
+                    The server (using <code>app.py</code>, often with a framework like Flask or FastAPI) powers the interactive <strong>Gradio</strong> demonstration hosted on <strong>Hugging Face Spaces</strong>. It acts as a hub, allowing different AI agents and applications to connect and leverage its hosted AI capabilities through a standardized protocol. This architecture promotes modularity and interoperability in AI systems.
+                </p>
+
+                <h3>Key Features & Technologies:</h3>
+                <ul>
+                    <li><strong>Core Language:</strong> Python</li>
+                    <li><strong>Protocol:</strong> Model Context Protocol (MCP) Server</li>
+                    <li><strong>AI Model Hosting:</strong> Capable of serving models like Qwen via Hugging Face Transformers</li>
+                    <li><strong>Demo Interface Backend:</strong> Powers Gradio UI</li>
+                    <li><strong>Deployment Example:</strong> Hugging Face Spaces</li>
+                    <li><strong>Key File:</strong> <code>app.py</code></li>
+                </ul>
+
+                <h3>Project Links:</h3>
+                <ul>
+                    <li><a href="https://github.com/mwill20/Sentiment-Analysis" target="_blank" rel="noopener noreferrer">View Code on GitHub (Sentiment Analysis Specific)</a></li>
+                    <li><a href="https://huggingface.co/spaces/mwill-AImission/MCP_Project" target="_blank" rel="noopener noreferrer">Live Demo on Hugging Face Spaces</a></li>
+                </ul>
+                <hr style="border-color: #0f0;">
+                <p>
+                    This server forms the backbone for an ecosystem of interconnected AI agents.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Michael Williams</p>
+    </footer>
+</body>
+</html>

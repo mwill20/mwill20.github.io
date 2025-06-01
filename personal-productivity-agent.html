@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project: Personal Productivity Agent - Michael Williams</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #0f0;
+            font-family: 'Courier New', monospace;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .profile-container {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .profile-image img {
+            width: 200px;
+            height: auto;
+            border: 2px solid #0f0;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .project-card {
+            border: 1px solid #0f0;
+            padding: 15px;
+            background-color: #000;
+        }
+
+        .project-image {
+            height: 250px; /* Fixed height for all project images */
+            overflow: hidden;
+            border: 1px solid #0f0;
+            margin-bottom: 15px;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border: none;
+        }
+
+        .tech-tag {
+            display: inline-block;
+            padding: 2px 8px;
+            margin: 2px;
+            border: 1px solid #0f0;
+            border-radius: 3px;
+        }
+
+        .project-links a {
+            color: #0f0;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .contact-icon {
+            font-size: 24px;
+            margin-right: 10px;
+            color: #0f0;
+        }
+
+        .contact-info a {
+            color: #0f0;
+            text-decoration: none;
+        }
+
+        h1, h2, h3 {
+            color: #0f0;
+            border-bottom: 1px solid #0f0;
+        }
+        /* Added styles for a dedicated project page, if needed */
+        .project-detail-container {
+            padding: 20px;
+            border: 1px solid #0f0;
+            margin-top: 20px;
+        }
+        .project-detail-container h2 {
+            margin-top: 0;
+        }
+        .project-detail-container ul {
+            list-style-type: square; /* Example styling */
+            padding-left: 20px;
+        }
+        .project-detail-container a {
+            color: #0f0; /* Ensure links are styled */
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Michael Williams</h1>
+        <nav>
+            <!-- Adjust links to navigate back to home sections or other pages -->
+            <a href="index.html#about">About</a> |
+            <a href="index.html#projects">Projects</a> |
+            <a href="index.html#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="project-detail">
+            <div class="project-detail-container">
+                <h2>Project: Personal Productivity Agent</h2>
+                
+                <p>
+                    I'm excited to share a project I've been developing: a <strong>Personal Productivity Agent</strong> for Windows! 
+                    This Python-based tool is designed to help automate various tasks, provide system insights, and 
+                    even leverage the power of Google's Gemini Large Language Model (LLM) for intelligent analysis.
+                </p>
+                
+                <p>
+                    <strong>Check out the code on GitHub:</strong>
+                    <a href="https://github.com/mwill20/PersonalProductivityAgent" target="_blank" rel="noopener noreferrer">Personal Productivity Agent Repository</a>
+                </p>
+
+                <h3>What It Does</h3>
+                <p>
+                    The agent is packed with features to make daily computing tasks easier and more insightful:
+                </p>
+                <ul>
+                    <li>
+                        <strong>Smart Windows Event Log Analysis:</strong> This is a key feature. The agent can:
+                        <ul>
+                            <li>Fetch specific Windows Event Logs.</li>
+                            <li>Use the Gemini LLM to analyze errors.</li>
+                            <li>Provide clear explanations, list potential causes, and offer troubleshooting steps.</li>
+                            <li>Suggest a safe command-line fix, indicating if it requires administrator privileges.</li>
+                        </ul>
+                    </li>
+                    <li><strong>File System Management:</strong> Easily find, move, or rename files, and create directories, all with interactive confirmations.</li>
+                    <li><strong>System Utilities:</strong> Get quick information about your computer's disk usage, memory, CPU, and network status. You can also launch applications or find duplicate files.</li>
+                    <li><strong>Productivity Boosters:</strong> Summarize documents, view upcoming events from <code>.ics</code> calendar files, and set helpful desktop reminders.</li>
+                </ul>
+
+                <h3>Two Modes of Operation</h3>
+                <p>
+                    One of the powerful aspects of this agent is its flexibility:
+                </p>
+                <ol>
+                    <li>
+                        <strong>Interactive Command-Line Assistant:</strong><br>
+                        Simply run <code>python main_agent.py</code> in your terminal. You'll get a user-friendly menu to access all its features directly. This is great for hands-on use.
+                    </li>
+                    <li>
+                        <strong>MCP (Multi-Capability Protocol) Server Mode:</strong><br>
+                        By running <code>python main_agent.py --mcp-mode</code>, the agent transforms into a backend server. It listens for commands in a special JSON format (MCP) sent by other programs.
+                        <ul>
+                            <li><strong>Why is this important?</strong> It allows other applications or orchestrator agents (like the <code>agent.ts</code> TypeScript agent we've also explored) to use the Python agent's capabilities programmatically. For instance, <code>agent.ts</code> could ask the Python agent to analyze event logs and then display the results in a custom UI or trigger further automated actions.</li>
+                            <li>This architecture enables building more complex, modular AI systems where different agents specialize in different tasks and communicate seamlessly.</li>
+                            <li>Furthermore, in its client capacity, this agent can also connect to a more comprehensive <a href="sentiment-analysis-mcp.html">'MCP Core Server & AI Model Hub'</a>. This allows it to offload computationally intensive AI tasks or access a wider variety of specialized models hosted on the central server, augmenting its native Gemini LLM capabilities.</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <h3>Technologies Used</h3>
+                <ul>
+                    <li><strong>Python:</strong> The core programming language.</li>
+                    <li><strong>Google Gemini LLM:</strong> Powers the intelligent analysis features.</li>
+                    <li><strong>JSON &amp; Standard I/O:</strong> Forms the basis of the MCP communication in server mode.</li>
+                    <li><strong>MCP Client/Server:</strong> Enables both hosting its own capabilities and connecting to other MCP services.</li>
+                </ul>
+
+                <h3>Enhanced AI with MCP Core Server</h3>
+                <p>
+                    While the Personal Productivity Agent has powerful built-in features using Google's Gemini LLM, its ability to act as an MCP client significantly expands its potential. By connecting to the <a href="sentiment-analysis-mcp.html">'MCP Core Server & AI Model Hub'</a>, it can leverage even larger or more specialized AI models hosted there. This hybrid approach allows for efficient local processing for many tasks, with the option to tap into a more powerful, centralized AI resource when needed, creating a truly versatile and intelligent assistant.
+                </p>
+
+                <h3>Explore the Project</h3>
+                <p>
+                    All the code for the Personal Productivity Agent, including the MCP server implementation, is available in its GitHub repository. I encourage you to take a look!
+                </p>
+                <p>
+                    <a href="https://github.com/mwill20/PersonalProductivityAgent" target="_blank" rel="noopener noreferrer">Visit the Personal Productivity Agent Repository</a>
+                </p>
+                <hr style="border-color: #0f0;">
+                <p>
+                    This project demonstrates how scripting, AI language models, and inter-process communication can be combined 
+                    to create genuinely useful and intelligent tools. I'm looking forward to developing it further!
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Michael Williams</p>
+    </footer>
+</body>
+</html>

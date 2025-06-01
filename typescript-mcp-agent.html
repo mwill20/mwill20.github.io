@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypeScript MCP Tiny Agent - Michael Williams</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #0f0;
+            font-family: 'Courier New', monospace;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        /* ... (all other styles from your index.html's inline style block) ... */
+        .profile-container { display: flex; align-items: flex-start; gap: 20px; margin: 20px 0; }
+        .profile-image img { width: 200px; height: auto; border: 2px solid #0f0; }
+        .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0; }
+        .project-card { border: 1px solid #0f0; padding: 15px; background-color: #000; }
+        .project-image { height: 250px; overflow: hidden; border: 1px solid #0f0; margin-bottom: 15px; }
+        .project-image img { width: 100%; height: 100%; object-fit: cover; border: none; }
+        .tech-tag { display: inline-block; padding: 2px 8px; margin: 2px; border: 1px solid #0f0; border-radius: 3px; }
+        .project-links a { color: #0f0; text-decoration: none; margin-right: 10px; }
+        .contact-item { display: flex; align-items: center; margin-bottom: 20px; }
+        .contact-icon { font-size: 24px; margin-right: 10px; color: #0f0; }
+        .contact-info a { color: #0f0; text-decoration: none; }
+        h1, h2, h3 { color: #0f0; border-bottom: 1px solid #0f0; }
+        .project-detail-container { padding: 20px; border: 1px solid #0f0; margin-top: 20px; }
+        .project-detail-container h2 { margin-top: 0; }
+        .project-detail-container ul { list-style-type: square; padding-left: 20px; }
+        .project-detail-container a { color: #0f0; }
+        .project-detail-container code { background-color: #111; color: #0f0; padding: 2px 4px; border: 1px solid #0a0; border-radius: 3px;}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Michael Williams</h1>
+        <nav>
+            <a href="index.html#about">About</a> |
+            <a href="index.html#projects">Projects</a> |
+            <a href="index.html#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="project-detail">
+            <div class="project-detail-container">
+                <h2>TypeScript MCP Tiny Agent</h2>
+                
+                <p>
+                    This project showcases a lightweight AI agent built with TypeScript and the <code>huggingface/tiny-agents</code> framework. It's designed to communicate with an MCP (Model Context Protocol) server, like the <a href="sentiment-analysis-mcp.html">'MCP Core Server & AI Model Hub'</a>, to perform tasks by leveraging remotely hosted AI models.
+                </p>
+                <p>
+                    This agent can utilize tools such as Playwright for browser automation and other web interactions, demonstrating a modular approach to building intelligent applications. It acts as a client to the 'MCP Core Server & AI Model Hub', offloading complex AI tasks and enabling sophisticated workflows through standardized communication.
+                </p>
+
+                <h3>Key Features & Technologies:</h3>
+                <ul>
+                    <li><strong>Core Language:</strong> TypeScript</li>
+                    <li><strong>Framework:</strong> <code>huggingface/tiny-agents</code></li>
+                    <li><strong>Runtime:</strong> Node.js</li>
+                    <li><strong>Protocol:</strong> Model Context Protocol (MCP) Client</li>
+                    <li><strong>Web Automation:</strong> Playwright</li>
+                    <li><strong>Connectivity:</strong> Connects to MCP servers like the <a href="sentiment-analysis-mcp.html">'MCP Core Server & AI Model Hub'</a>.</li>
+                </ul>
+
+                <h3>Project Links:</h3>
+                <ul>
+                    <li><a href="https://github.com/mwill20/mcp-tiny-agent" target="_blank" rel="noopener noreferrer">View Code on GitHub</a></li>
+                    <li>See the <a href="sentiment-analysis-mcp.html">'MCP Core Server & AI Model Hub'</a> for the server it connects to.</li>
+                </ul>
+                <hr style="border-color: #0f0;">
+                <p>
+                    This agent demonstrates the client-side of an MCP-based AI ecosystem.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Michael Williams</p>
+    </footer>
+</body>
+</html>

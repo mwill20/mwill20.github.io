@@ -96,6 +96,7 @@
         <h1>Michael Williams</h1>
         <nav>
             <a href="#about">About</a> |
+            <a href="#mcp-ecosystem">MCP Ecosystem</a> |
             <a href="#projects">Projects</a> |
             <a href="#contact">Contact</a>
         </nav>
@@ -135,6 +136,131 @@
             </div>
         </section>
 
+        <section id="mcp-ecosystem">
+            <h2>MCP Ecosystem</h2>
+            <div class="ecosystem-container">
+                <!-- MCP Server at the top -->
+                <div class="mcp-server">
+                    <div class="ecosystem-node server">
+                        <div class="node-icon">🖥️</div>
+                        <h3>MCP Core Server</h3>
+                        <p>Central AI Model Hub & API Gateway</p>
+                    </div>
+                </div>
+                
+                <!-- Connection lines -->
+                <div class="connection-lines">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+                
+                <!-- Agents row -->
+                <div class="agents-row">
+                    <div class="ecosystem-node agent">
+                        <div class="node-icon">🤖</div>
+                        <h3>TypeScript MCP Agent</h3>
+                        <p>Web automation & MCP client</p>
+                    </div>
+                    
+                    <div class="ecosystem-node agent">
+                        <div class="node-icon">⚙️</div>
+                        <h3>Productivity Agent</h3>
+                        <p>Windows automation & MCP client</p>
+                    </div>
+                    
+                    <div class="ecosystem-node agent future">
+                        <div class="node-icon">🔒</div>
+                        <h3>Security Agent</h3>
+                        <p>Coming soon</p>
+                    </div>
+                </div>
+            </div>
+            
+            <style>
+                .ecosystem-container {
+                    max-width: 1000px;
+                    margin: 0 auto 50px;
+                    text-align: center;
+                }
+                
+                .mcp-server {
+                    margin-bottom: 20px;
+                }
+                
+                .ecosystem-node {
+                    display: inline-block;
+                    border: 2px solid #0f0;
+                    border-radius: 10px;
+                    padding: 20px;
+                    margin: 0 15px;
+                    background-color: #111;
+                    width: 200px;
+                    vertical-align: top;
+                    transition: all 0.3s ease;
+                }
+                
+                .ecosystem-node:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 5px 15px rgba(0, 255, 0, 0.3);
+                }
+                
+                .server {
+                    border-color: #00ff00;
+                    width: 300px;
+                }
+                
+                .agent {
+                    border-color: #00aaff;
+                }
+                
+                .future {
+                    opacity: 0.7;
+                    border-style: dashed;
+                }
+                
+                .node-icon {
+                    font-size: 2.5em;
+                    margin-bottom: 10px;
+                }
+                
+                .connection-lines {
+                    display: flex;
+                    justify-content: center;
+                    margin-bottom: 20px;
+                }
+                
+                .line {
+                    width: 1px;
+                    height: 50px;
+                    background: linear-gradient(to bottom, #0f0, transparent);
+                    margin: 0 100px;
+                }
+                
+                .agents-row {
+                    display: flex;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    gap: 20px;
+                }
+                
+                @media (max-width: 768px) {
+                    .agents-row {
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                    
+                    .line {
+                        display: none;
+                    }
+                    
+                    .connection-lines {
+                        height: 30px;
+                    }
+                }
+            </style>
+        </section>
+        
         <section id="projects">
             <h2>Projects</h2>
             <div class="projects-grid">

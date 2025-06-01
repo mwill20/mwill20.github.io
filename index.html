@@ -140,52 +140,120 @@
             <h2>MCP Ecosystem</h2>
             <div class="ecosystem-container">
                 <!-- MCP Server at the top -->
-                <div class="mcp-server">
-                    <div class="ecosystem-node server">
+                <div class="tier">
+                    <div class="ecosystem-node server active" data-project="mcp-core">
                         <div class="node-icon">🖥️</div>
                         <h3>MCP Core Server</h3>
                         <p>Central AI Model Hub & API Gateway</p>
                     </div>
                 </div>
                 
-                <!-- Connection lines -->
+                <!-- Connection lines to agents -->
                 <div class="connection-lines">
-                    <div class="line"></div>
                     <div class="line"></div>
                     <div class="line"></div>
                 </div>
                 
                 <!-- Agents row -->
-                <div class="agents-row">
-                    <div class="ecosystem-node agent">
+                <div class="tier agents-row">
+                    <div class="ecosystem-node agent" data-project="typescript-agent">
                         <div class="node-icon">🤖</div>
                         <h3>TypeScript MCP Agent</h3>
                         <p>Web automation & MCP client</p>
                     </div>
                     
-                    <div class="ecosystem-node agent">
+                    <div class="ecosystem-node agent" data-project="productivity-agent">
                         <div class="node-icon">⚙️</div>
                         <h3>Productivity Agent</h3>
                         <p>Windows automation & MCP client</p>
                     </div>
-                    
-                    <div class="ecosystem-node agent future">
+                </div>
+                
+                <!-- Connection lines to security -->
+                <div class="connection-lines">
+                    <div class="line"></div>
+                </div>
+                
+                <!-- Security tier -->
+                <div class="tier">
+                    <div class="ecosystem-node security future" data-project="security-agent">
                         <div class="node-icon">🔒</div>
-                        <h3>Security Agent</h3>
-                        <p>Coming soon</p>
+                        <h3>Security Layer</h3>
+                        <p>Coming soon - Automated security testing & monitoring</p>
+                    </div>
+                </div>
+                
+                <!-- Project Details Panel -->
+                <div class="project-details-panel">
+                    <div class="project-details-content active" id="mcp-core">
+                        <h3>MCP Core Server & AI Model Hub</h3>
+                        <p>The central Python-based MCP server hosting AI models (like Qwen for sentiment analysis) and exposing them via the Model Context Protocol. Powers interactive demos on Hugging Face Spaces.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">MCP</span>
+                            <span class="tech-tag">AI/ML</span>
+                            <span class="tech-tag">HuggingFace</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="sentiment-analysis-mcp.html" class="view-demo">View Demo</a>
+                            <a href="https://github.com/mwill20/MCP_Project" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                    
+                    <div class="project-details-content" id="typescript-agent">
+                        <h3>TypeScript MCP Agent</h3>
+                        <p>Lightweight TypeScript agent for MCP with web automation capabilities using Playwright. Connects to the MCP Core Server for AI tasks and provides a simple interface for web automation.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">MCP</span>
+                            <span class="tech-tag">Playwright</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="typescript-mcp-agent.html">View Project</a>
+                            <a href="https://github.com/mwill20/mcp-tiny-agent" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                    
+                    <div class="project-details-content" id="productivity-agent">
+                        <h3>Personal Productivity Agent</h3>
+                        <p>Python-based Windows automation tool with event log analysis using Gemini LLM and MCP client capabilities. Helps automate repetitive tasks and provides insights from system events.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">MCP</span>
+                            <span class="tech-tag">Automation</span>
+                            <span class="tech-tag">Windows</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="personal-productivity-agent.html">View Project</a>
+                            <a href="https://github.com/mwill20/PersonalProductivityAgent" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                    
+                    <div class="project-details-content" id="security-agent">
+                        <h3>Security Layer</h3>
+                        <p>Upcoming security-focused component that will provide automated security testing, vulnerability scanning, and monitoring for the MCP ecosystem. Will integrate with the MCP Core Server to analyze and secure all communications.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Security</span>
+                            <span class="tech-tag">MCP</span>
+                            <span class="tech-tag">Automation</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="coming-soon">Coming Soon</a>
+                        </div>
                     </div>
                 </div>
             </div>
             
             <style>
                 .ecosystem-container {
-                    max-width: 1000px;
+                    max-width: 1200px;
                     margin: 0 auto 50px;
                     text-align: center;
                 }
                 
-                .mcp-server {
-                    margin-bottom: 20px;
+                .tier {
+                    margin: 20px 0;
+                    position: relative;
                 }
                 
                 .ecosystem-node {
@@ -195,9 +263,12 @@
                     padding: 20px;
                     margin: 0 15px;
                     background-color: #111;
-                    width: 200px;
+                    width: 250px;
                     vertical-align: top;
                     transition: all 0.3s ease;
+                    cursor: pointer;
+                    position: relative;
+                    z-index: 1;
                 }
                 
                 .ecosystem-node:hover {
@@ -205,13 +276,23 @@
                     box-shadow: 0 5px 15px rgba(0, 255, 0, 0.3);
                 }
                 
+                .ecosystem-node.active {
+                    border-color: #00ff00;
+                    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+                }
+                
                 .server {
                     border-color: #00ff00;
-                    width: 300px;
+                    width: 350px;
                 }
                 
                 .agent {
                     border-color: #00aaff;
+                }
+                
+                .security {
+                    border-color: #ff4444;
+                    width: 300px;
                 }
                 
                 .future {
@@ -227,7 +308,9 @@
                 .connection-lines {
                     display: flex;
                     justify-content: center;
-                    margin-bottom: 20px;
+                    margin: 0 auto;
+                    position: relative;
+                    z-index: 0;
                 }
                 
                 .line {
@@ -241,21 +324,75 @@
                     display: flex;
                     justify-content: center;
                     flex-wrap: wrap;
-                    gap: 20px;
+                    gap: 30px;
+                    margin: 20px auto;
+                }
+                
+                .project-details-panel {
+                    margin-top: 40px;
+                    padding: 25px;
+                    border: 1px solid #333;
+                    border-radius: 10px;
+                    background-color: #0a0a0a;
+                    text-align: left;
+                    min-height: 250px;
+                }
+                
+                .project-details-content {
+                    display: none;
+                }
+                
+                .project-details-content.active {
+                    display: block;
+                    animation: fadeIn 0.5s ease-in-out;
+                }
+                
+                @keyframes fadeIn {
+                    from { opacity: 0; transform: translateY(10px); }
+                    to { opacity: 1; transform: translateY(0); }
+                }
+                
+                .project-links {
+                    margin-top: 20px;
+                }
+                
+                .project-links a {
+                    display: inline-block;
+                    margin-right: 15px;
+                    color: #0f0;
+                    text-decoration: none;
+                    border: 1px solid #0f0;
+                    padding: 5px 15px;
+                    border-radius: 4px;
+                    transition: all 0.3s ease;
+                }
+                
+                .project-links a:hover {
+                    background-color: #0f0;
+                    color: #000;
+                }
+                
+                .coming-soon {
+                    opacity: 0.7;
+                    cursor: not-allowed;
                 }
                 
                 @media (max-width: 768px) {
                     .agents-row {
                         flex-direction: column;
-                        align-items: center;
-                    }
-                    
-                    .line {
-                        display: none;
                     }
                     
                     .connection-lines {
                         height: 30px;
+                    }
+                    
+                    .ecosystem-node {
+                        width: 80%;
+                        margin: 10px 0;
+                    }
+                    
+                    .server, .security {
+                        width: 90%;
                     }
                 }
             </style>
@@ -353,7 +490,60 @@
 
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="images/mwill_AImission_MCP_Project.png" alt="MCP Core Server Project">
+                        <img src="images/huggingface-sentiment-analysis.jpg" alt="Sentiment Analysis with MCP">
+                    </div>
+                    <h3>Sentiment Analysis with MCP</h3>
+                    <p>Real-time sentiment analysis service integrated with MCP Core Server.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">MCP</span>
+                        <span class="tech-tag">NLP</span>
+                        <span class="tech-tag">HuggingFace</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="sentiment-analysis-mcp.html">View Project</a>
+                        <a href="https://github.com/mwill20/Sentiment-Analysis" target="_blank">GitHub</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/mcp_tiny_agent.png" alt="TypeScript MCP Agent">
+                    </div>
+                    <h3>TypeScript MCP Agent</h3>
+                    <p>Lightweight TypeScript agent for MCP with web automation capabilities.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">MCP</span>
+                        <span class="tech-tag">Playwright</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="typescript-mcp-agent.html">View Project</a>
+                        <a href="https://github.com/mwill20/mcp-tiny-agent" target="_blank">GitHub</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/productivity_agent.png" alt="Personal Productivity Agent">
+                    </div>
+                    <h3>Personal Productivity Agent</h3>
+                    <p>Python-based Windows automation tool with event log analysis and MCP client capabilities.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">MCP</span>
+                        <span class="tech-tag">Automation</span>
+                        <span class="tech-tag">Windows</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="personal-productivity-agent.html">View Project</a>
+                        <a href="https://github.com/mwill20/PersonalProductivityAgent" target="_blank">GitHub</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/mcp_server.png" alt="MCP Core Server Project">
                     </div>
                     <h3>MCP Core Server & AI Model Hub</h3>
                     <p>The central Python-based MCP server hosting AI models (like Qwen for sentiment analysis) and exposing them via the Model Context Protocol. Powers interactive demos on Hugging Face Spaces.</p>
@@ -440,5 +630,54 @@
     <footer>
         <p>&copy; 2024 Michael Williams</p>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all ecosystem nodes
+            const nodes = document.querySelectorAll('.ecosystem-node');
+            const detailsPanels = document.querySelectorAll('.project-details-content');
+            
+            // Show MCP Core details by default
+            document.getElementById('mcp-core').classList.add('active');
+            
+            // Add click event listeners to all nodes
+            nodes.forEach(node => {
+                node.addEventListener('click', function() {
+                    const projectId = this.getAttribute('data-project');
+                    
+                    // Update active state for nodes
+                    nodes.forEach(n => n.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Update active state for details panels
+                    detailsPanels.forEach(panel => {
+                        panel.classList.remove('active');
+                        if (panel.id === projectId) {
+                            setTimeout(() => {
+                                panel.classList.add('active');
+                            }, 10);
+                        }
+                    });
+                });
+            });
+            
+            // Add hover effect for nodes
+            nodes.forEach(node => {
+                node.addEventListener('mouseenter', function() {
+                    if (!this.classList.contains('active')) {
+                        this.style.transform = 'translateY(-5px)';
+                        this.style.boxShadow = '0 5px 15px rgba(0, 255, 0, 0.3)';
+                    }
+                });
+                
+                node.addEventListener('mouseleave', function() {
+                    if (!this.classList.contains('active')) {
+                        this.style.transform = '';
+                        this.style.boxShadow = '';
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>

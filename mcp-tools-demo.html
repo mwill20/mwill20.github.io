@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCP Tools Demo - Michael Williams</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>MCP Tools Demo</h1>
+        <nav>
+            <a href="index.html">Home</a> |
+            <a href="index.html#about">About</a> |
+            <a href="index.html#projects">Projects</a> |
+            <a href="index.html#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="project-detail">
+            <div class="project-header">
+                <h2>MCP Tools Demo</h2>
+                <div class="project-links">
+                    <a href="https://github.com/mwill20/mcp-tools" target="_blank" rel="noopener noreferrer" class="button">GitHub Repository</a>
+                    <a href="https://huggingface.co/spaces/mwill-AImission/mcp-tools-demo" target="_blank" rel="noopener noreferrer" class="button">Live Demo on Hugging Face</a>
+                </div>
+            </div>
+
+            <div class="project-content">
+                <div class="project-image-large">
+                    <img src="images/mcp_tools_demo.png" alt="MCP Tools Demo" style="max-width: 100%; height: auto;">
+                </div>
+
+                <div class="tech-stack">
+                    <h3>Technology Stack</h3>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Gradio 5.32.1</span>
+                        <span class="tech-tag">smolagents 1.17.0</span>
+                        <span class="tech-tag">Model Context Protocol</span>
+                        <span class="tech-tag">Hugging Face Spaces</span>
+                        <span class="tech-tag">TextBlob</span>
+                    </div>
+                </div>
+
+                <div class="project-description">
+                    <h3>Project Overview</h3>
+                    <p>
+                        The MCP Tools Demo is a multi-tool Gradio application that demonstrates the integration of Model Context Protocol (MCP) tools. 
+                        This application showcases how AI tools can be exposed through a standardized protocol, making them accessible both through a 
+                        user interface and programmatically via API endpoints.
+                    </p>
+
+                    <h3>Features</h3>
+                    <ul>
+                        <li><strong>Sentiment Analysis Tool:</strong> Analyzes the sentiment of text and provides polarity and subjectivity scores using TextBlob.</li>
+                        <li><strong>Weather Tool:</strong> Provides weather information for a specified location (mock implementation for demonstration).</li>
+                        <li><strong>Calculator Tool:</strong> Performs basic arithmetic operations (add, subtract, multiply, divide).</li>
+                        <li><strong>MCP Integration:</strong> All tools are exposed via the Model Context Protocol using smolagents.</li>
+                        <li><strong>Gradio UI:</strong> User-friendly interface for interacting with the tools.</li>
+                    </ul>
+
+                    <h3>Technical Implementation</h3>
+                    <p>
+                        The application uses the <code>@tool</code> decorator from <code>smolagents.tools</code> to expose Python functions as MCP tools. 
+                        These tools are then integrated into a Gradio interface, which provides both a web UI and API endpoints.
+                    </p>
+
+                    <p>
+                        The application is configured to run both locally and in a Hugging Face Spaces environment, with environment variables 
+                        controlling the server configuration and MCP enablement.
+                    </p>
+
+                    <h3>Deployment</h3>
+                    <p>
+                        The application is deployed on Hugging Face Spaces, making it accessible to anyone with an internet connection. 
+                        The deployment process involved pushing the code to GitHub and linking the repository to Hugging Face Spaces.
+                    </p>
+
+                    <h3>Challenges and Solutions</h3>
+                    <p>
+                        One of the main challenges was ensuring compatibility between Gradio 5.32.1 and smolagents 1.17.0. 
+                        This required careful implementation of the <code>@tool</code> decorator and proper error handling for MCP initialization.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Michael Williams</p>
+    </footer>
+</body>
+</html>

@@ -148,6 +148,34 @@
                     </div>
                 </div>
                 
+                <!-- Connection lines to tools -->
+                <div class="connection-lines">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+                
+                <!-- Tools row -->
+                <div class="tier tools-row">
+                    <div class="ecosystem-node tool" data-project="calculator-tool">
+                        <div class="node-icon">🧮</div>
+                        <h3>Calculator Tool</h3>
+                        <p>MCP-enabled math operations</p>
+                    </div>
+                    
+                    <div class="ecosystem-node tool" data-project="sentiment-tool">
+                        <div class="node-icon">😊</div>
+                        <h3>Sentiment Analysis</h3>
+                        <p>Text emotion detection</p>
+                    </div>
+                    
+                    <div class="ecosystem-node tool" data-project="weather-tool">
+                        <div class="node-icon">🌤️</div>
+                        <h3>Weather Tool</h3>
+                        <p>Location-based forecasts</p>
+                    </div>
+                </div>
+                
                 <!-- Connection lines to agents -->
                 <div class="connection-lines">
                     <div class="line"></div>
@@ -226,6 +254,56 @@
                         <div class="project-links">
                             <a href="personal-productivity-agent.html">View Project</a>
                             <a href="https://github.com/mwill20/PersonalProductivityAgent" target="_blank">GitHub</a>
+                        </div>
+                    </div>
+                    
+                    <div class="project-details-content" id="calculator-tool">
+                        <h3>Calculator Tool</h3>
+                        <p>A Python-based calculator tool integrated with the MCP Core Server. Provides basic and advanced mathematical operations through a simple interface. Part of the MCP Tools Demo suite.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">MCP</span>
+                            <span class="tech-tag">Gradio</span>
+                            <span class="tech-tag">smolagents</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="mcp-tools-demo.html">View Project</a>
+                            <a href="https://github.com/mwill20/mcp-tools" target="_blank">GitHub</a>
+                            <a href="https://huggingface.co/spaces/mwill-AImission/mcp-tools-demo" target="_blank">Live Demo</a>
+                        </div>
+                    </div>
+                    
+                    <div class="project-details-content" id="sentiment-tool">
+                        <h3>Sentiment Analysis Tool</h3>
+                        <p>Text sentiment analysis tool that evaluates the emotional tone of input text. Leverages the MCP Core Server's AI capabilities to provide positive, negative, or neutral sentiment ratings with confidence scores.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">MCP</span>
+                            <span class="tech-tag">NLP</span>
+                            <span class="tech-tag">TextBlob</span>
+                            <span class="tech-tag">Gradio</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="mcp-tools-demo.html">View Project</a>
+                            <a href="https://github.com/mwill20/mcp-tools" target="_blank">GitHub</a>
+                            <a href="https://huggingface.co/spaces/mwill-AImission/mcp-tools-demo" target="_blank">Live Demo</a>
+                        </div>
+                    </div>
+                    
+                    <div class="project-details-content" id="weather-tool">
+                        <h3>Weather Tool</h3>
+                        <p>Location-based weather forecasting tool that retrieves current weather conditions and forecasts. Integrated with the MCP Core Server to provide weather data through a simple interface.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">MCP</span>
+                            <span class="tech-tag">API Integration</span>
+                            <span class="tech-tag">Gradio</span>
+                            <span class="tech-tag">smolagents</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="mcp-tools-demo.html">View Project</a>
+                            <a href="https://github.com/mwill20/mcp-tools" target="_blank">GitHub</a>
+                            <a href="https://huggingface.co/spaces/mwill-AImission/mcp-tools-demo" target="_blank">Live Demo</a>
                         </div>
                     </div>
                     
@@ -320,12 +398,17 @@
                     margin: 0 100px;
                 }
                 
-                .agents-row {
+                .agents-row, .tools-row {
                     display: flex;
                     justify-content: center;
                     flex-wrap: wrap;
                     gap: 30px;
                     margin: 20px auto;
+                }
+                
+                .tool {
+                    border-color: #00ff99;
+                    background-color: #0a1a0a;
                 }
                 
                 .project-details-panel {

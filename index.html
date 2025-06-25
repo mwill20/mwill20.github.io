@@ -3,16 +3,657 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Michael Williams - Personal Website</title>
-    <style>
-        body {
-            background-color: #000;
-            color: #0f0;
-            font-family: 'Courier New', monospace;
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
-        }
+    <title>Michael Williams | AI Security Engineer</title>
+    <meta name="description" content="Cybersecurity Analyst II at 11:11 Systems | Aspiring AI/ML Security Engineer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Code+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">MW</a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#mcp-ecosystem">MCP Ecosystem</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <button class="theme-toggle" aria-label="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Michael Williams</h1>
+                <h2 class="hero-subtitle">Cybersecurity Analyst II | AI/ML Security Engineer</h2>
+                <p class="hero-description">Bridging the gap between cybersecurity and artificial intelligence to build secure, intelligent systems</p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-outline">Get In Touch</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <div class="divider"></div>
+                <p class="section-description">Cybersecurity Analyst II at 11:11 Systems | Aspiring AI/ML Security Engineer</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I'm a Security Analyst transitioning into AI/ML Security Engineering, combining my strong foundation in cybersecurity with advanced expertise in artificial intelligence. With hands-on experience in SIEM, EDR, and SOAR platforms, I'm now focusing on securing AI systems and developing ML-powered security solutions.</p>
+                    
+                    <p>My expertise includes:</p>
+                    <ul>
+                        <li>AI/ML Security Assessment and Implementation</li>
+                        <li>Neural Network Architecture Security</li>
+                        <li>Machine Learning-Enhanced Threat Detection</li>
+                        <li>Security Analysis with Advanced AI Tools</li>
+                        <li>MITRE ATT&CK Framework for AI Systems</li>
+                    </ul>
+
+                    <p>Currently pursuing growth in:</p>
+                    <ul>
+                        <li>AI Security Engineering and Architecture</li>
+                        <li>Large Language Model Security</li>
+                        <li>AI Alignment and Safety</li>
+                        <li>Adversarial Machine Learning Defense</li>
+                        <li>AI/ML-Enhanced Security Operations</li>
+                    </ul>
+
+                    <p>With 17 cybersecurity certifications and active projects in AI/ML security, I'm passionate about bridging the gap between traditional security and emerging AI technologies. My goal is to develop and implement secure AI systems while protecting existing AI infrastructure from emerging threats.</p>
+                    
+                    <div class="skills">
+                        <h3>Technical Skills</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">AI/ML Security</span>
+                            <span class="skill-tag">Cybersecurity</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Model Security</span>
+                            <span class="skill-tag">Threat Detection</span>
+                            <span class="skill-tag">SIEM/EDR/SOAR</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="images/profile.jpg" alt="Michael Williams" class="profile-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MCP Ecosystem Section -->
+    <section id="mcp-ecosystem" class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">MCP Ecosystem</h2>
+                <div class="divider"></div>
+                <p class="section-description">A collection of interconnected AI tools and services built on the Model Context Protocol</p>
+            </div>
+            
+            <div class="ecosystem-container">
+                <!-- MCP Server at the top -->
+                <div class="tier">
+                    <div class="ecosystem-node server active" data-project="mcp-core">
+                        <div class="node-icon">🖥️</div>
+                        <h3>MCP Core Server</h3>
+                        <p>Central AI Model Hub & API Gateway</p>
+                    </div>
+                </div>
+                
+                <!-- Connection lines to tools -->
+                <div class="connection-lines">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+                
+                <!-- Tools row -->
+                <div class="tier tools-row">
+                    <div class="ecosystem-node tool" data-project="calculator-tool">
+                        <div class="node-icon">🧮</div>
+                        <h3>Calculator Tool</h3>
+                        <p>MCP-enabled math operations</p>
+                    </div>
+                    
+                    <div class="ecosystem-node tool" data-project="sentiment-tool">
+                        <div class="node-icon">😊</div>
+                        <h3>Sentiment Analysis</h3>
+                        <p>Text emotion detection</p>
+                    </div>
+                    
+                    <div class="ecosystem-node tool" data-project="weather-tool">
+                        <div class="node-icon">🌤️</div>
+                        <h3>Weather Tool</h3>
+                        <p>Location-based forecasts</p>
+                    </div>
+                </div>
+                
+                <!-- Connection lines to agents -->
+                <div class="connection-lines">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+                
+                <!-- Agents row -->
+                <div class="tier agents-row">
+                    <div class="ecosystem-node agent" data-project="typescript-agent">
+                        <div class="node-icon">🤖</div>
+                        <h3>TypeScript MCP Agent</h3>
+                        <p>Web automation & MCP client</p>
+                    </div>
+                    
+                    <div class="ecosystem-node agent" data-project="productivity-agent">
+                        <div class="node-icon">⚙️</div>
+                        <h3>Productivity Agent</h3>
+                        <p>Windows automation & MCP client</p>
+                    </div>
+                </div>
+                
+                <!-- Connection lines to security -->
+                <div class="connection-lines">
+                    <div class="line"></div>
+                </div>
+                
+                <!-- Security tier -->
+                <div class="tier">
+                    <div class="ecosystem-node security future" data-project="security-agent">
+                        <div class="node-icon">🔒</div>
+                        <h3>Security Layer</h3>
+                        <p>Coming soon - Automated security testing & monitoring</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project Details Panel -->
+            <div class="project-details-panel">
+                <div class="project-details-content active" id="mcp-core">
+                    <h3>MCP Core Server & AI Model Hub</h3>
+                    <p>The central Python-based MCP server hosting AI models (like Qwen for sentiment analysis) and exposing them via the Model Context Protocol. Powers interactive demos on Hugging Face Spaces.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">MCP</span>
+                        <span class="tech-tag">AI/ML</span>
+                        <span class="tech-tag">HuggingFace</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://huggingface.co/spaces/mwill-AImission/mcp-tools-demo" target="_blank" class="btn btn-sm">View on Hugging Face</a>
+                        <a href="https://github.com/mwill20/MCP_Project" target="_blank" class="btn btn-sm btn-outline">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="project-details-content" id="typescript-agent">
+                    <h3>TypeScript MCP Agent</h3>
+                    <p>Lightweight TypeScript agent for MCP with web automation capabilities using Playwright. Connects to the MCP Core Server for AI tasks and provides a simple interface for web automation. Enables browser automation and AI-powered interactions through the MCP protocol.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">MCP</span>
+                        <span class="tech-tag">Playwright</span>
+                        <span class="tech-tag">Web Automation</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="typescript-mcp-agent.html" class="btn btn-sm">View Project</a>
+                        <a href="https://github.com/mwill20/mcp-tiny-agent" target="_blank" class="btn btn-sm btn-outline">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="project-details-content" id="productivity-agent">
+                    <h3>Personal Productivity Agent</h3>
+                    <p>Windows automation tool with event log analysis using Gemini LLM and MCP client capabilities. Helps automate repetitive tasks and provides insights from system events. Integrates with the MCP ecosystem for enhanced AI capabilities.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">MCP</span>
+                        <span class="tech-tag">Windows Automation</span>
+                        <span class="tech-tag">Event Logs</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="personal-productivity-agent.html" class="btn btn-sm">View Project</a>
+                        <a href="https://github.com/mwill20/PersonalProductivityAgent" target="_blank" class="btn btn-sm btn-outline">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="project-details-content" id="calculator-tool">
+                    <h3>Calculator Tool</h3>
+                    <p>MCP-enabled calculator that performs complex mathematical operations. Integrates with the MCP Core Server to provide advanced computational capabilities and unit conversions. Supports both simple arithmetic and more complex mathematical functions.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">MCP</span>
+                        <span class="tech-tag">Mathematics</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://huggingface.co/spaces/mwill-AImission/mcp-tools-demo" target="_blank" class="btn btn-sm">View on Hugging Face</a>
+                        <a href="#" class="btn btn-sm btn-outline" disabled>
+                            <i class="fab fa-github"></i> Private Repo
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="project-details-content" id="sentiment-tool">
+                    <h3>Sentiment Analysis Tool</h3>
+                    <p>Text sentiment analysis tool that evaluates the emotional tone of input text. Leverages the MCP Core Server's AI capabilities to provide positive, negative, or neutral sentiment ratings with confidence scores. Can be used for social media monitoring, customer feedback analysis, and more.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">NLP</span>
+                        <span class="tech-tag">Sentiment Analysis</span>
+                        <span class="tech-tag">MCP</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="sentiment-analysis-mcp.html" class="btn btn-sm">Try Demo</a>
+                        <a href="https://github.com/mwill20/MCP_Project" target="_blank" class="btn btn-sm btn-outline">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="project-details-content" id="weather-tool">
+                    <h3>Weather Tool</h3>
+                    <p>Location-based weather information tool that provides current conditions and forecasts. Integrates with weather APIs through the MCP Core Server to deliver accurate weather data for any specified location. Includes temperature, humidity, wind speed, and precipitation information.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">API Integration</span>
+                        <span class="tech-tag">MCP</span>
+                        <span class="tech-tag">Weather Data</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://huggingface.co/spaces/mwill-AImission/mcp-tools-demo" target="_blank" class="btn btn-sm">View on Hugging Face</a>
+                        <a href="#" class="btn btn-sm btn-outline" disabled>
+                            <i class="fas fa-lock"></i> Private Repo
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="project-details-content" id="security-agent">
+                    <h3>Security Layer</h3>
+                    <p>Upcoming security component for the MCP ecosystem. Will provide automated security testing, monitoring, and threat detection capabilities. Will integrate with the MCP Core Server to enhance the security of AI model interactions and data processing.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Security</span>
+                        <span class="tech-tag">MCP</span>
+                        <span class="tech-tag">AI Security</span>
+                        <span class="tech-tag">In Development</span>
+                    </div>
+                    <div class="project-links">
+                        <button class="btn btn-sm" disabled>Coming Soon</button>
+                    </div>
+                </div>
+                
+                <div class="project-details-content" id="mcp-tools">
+                    <h3>MCP Tools Demo</h3>
+                    <p>Interactive demo showcasing various tools integrated with the Model Context Protocol. Includes examples of different MCP tools working together, demonstrating the flexibility and power of the MCP ecosystem for AI model integration and automation.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">MCP</span>
+                        <span class="tech-tag">Demo</span>
+                        <span class="tech-tag">Gradio</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://huggingface.co/spaces/mwill-AImission/mcp-tools-demo" target="_blank" class="btn btn-sm">View on Hugging Face</a>
+                        <a href="https://github.com/mwill20/mcp-tools" target="_blank" class="btn btn-sm btn-outline">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Projects</h2>
+                <div class="divider"></div>
+                <p class="section-description">A selection of my work in AI/ML security and development</p>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- AI-Powered Spam & Phishing Detector -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/spam-detector.png" alt="AI-Powered Spam & Phishing Detector">
+                    </div>
+                    <div class="project-content">
+                        <h3>AI-Powered Spam & Phishing Detector</h3>
+                        <p>Machine learning model to detect spam and phishing attempts in emails and messages with high accuracy.</p>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>NLP</span>
+                            <span>Machine Learning</span>
+                            <span>Security</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-sm">View Project</a>
+                            <a href="#" class="btn btn-sm btn-outline">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Smart Security Camera -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/security-camera.jpg" alt="Smart Security Camera">
+                    </div>
+                    <div class="project-content">
+                        <h3>Smart Security Camera</h3>
+                        <p>Computer vision system for real-time object detection and security alerts using deep learning.</p>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>OpenCV</span>
+                            <span>TensorFlow</span>
+                            <span>Computer Vision</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-sm">View Project</a>
+                            <a href="#" class="btn btn-sm btn-outline">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- HuggingFace Sentiment Analysis -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/huggingface-sentiment-analysis.jpg" alt="HuggingFace Sentiment Analysis">
+                    </div>
+                    <div class="project-content">
+                        <h3>HuggingFace Sentiment Analysis</h3>
+                        <p>Sentiment analysis tool using pre-trained models from HuggingFace Transformers.</p>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>Transformers</span>
+                            <span>NLP</span>
+                            <span>HuggingFace</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-sm">View Project</a>
+                            <a href="#" class="btn btn-sm btn-outline">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- XGBoost Regressor -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/XGBoost.jpg" alt="XGBoost Regressor">
+                    </div>
+                    <div class="project-content">
+                        <h3>XGBoost Regressor</h3>
+                        <p>Implementation of XGBoost algorithm for regression tasks with hyperparameter tuning.</p>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>XGBoost</span>
+                            <span>Machine Learning</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-sm">View Project</a>
+                            <a href="#" class="btn btn-sm btn-outline">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- OpenDiD -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/opendid.jpg" alt="OpenDiD Framework">
+                    </div>
+                    <div class="project-content">
+                        <h3>OpenDiD: Open Source Defense-in-Depth</h3>
+                        <p>Open source security framework implementing defense-in-depth principles for modern applications.</p>
+                        <div class="project-tags">
+                            <span>Security</span>
+                            <span>Framework</span>
+                            <span>Defense in Depth</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-sm">View Project</a>
+                            <a href="#" class="btn btn-sm btn-outline">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sentiment Analysis with MCP -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/sentiment_analysis_mcp.png" alt="Sentiment Analysis with MCP">
+                    </div>
+                    <div class="project-content">
+                        <h3>Sentiment Analysis with MCP</h3>
+                        <p>Text sentiment analysis tool integrated with the Model Context Protocol for AI model interaction.</p>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>MCP</span>
+                            <span>NLP</span>
+                            <span>Sentiment Analysis</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="sentiment-analysis-mcp.html" class="btn btn-sm">View Project</a>
+                            <a href="#" class="btn btn-sm btn-outline">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MCP Core Server -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/mcp_server.png" alt="MCP Core Server">
+                    </div>
+                    <div class="project-content">
+                        <h3>MCP Core Server & AI Model Hub</h3>
+                        <p>Central Python-based server for hosting AI models and exposing them via the Model Context Protocol.</p>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>MCP</span>
+                            <span>AI/ML</span>
+                            <span>API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-sm">View Project</a>
+                            <a href="https://github.com/mwill20/MCP_Project" target="_blank" class="btn btn-sm btn-outline">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TypeScript MCP Agent -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/mcp_tiny_agent.png" alt="TypeScript MCP Agent">
+                    </div>
+                    <div class="project-content">
+                        <h3>TypeScript MCP Tiny Agent</h3>
+                        <p>Lightweight TypeScript agent for interacting with MCP servers and performing web automation tasks.</p>
+                        <div class="project-tags">
+                            <span>TypeScript</span>
+                            <span>MCP</span>
+                            <span>Automation</span>
+                            <span>Playwright</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="typescript-mcp-agent.html" class="btn btn-sm">View Project</a>
+                            <a href="https://github.com/mwill20/mcp-tiny-agent" target="_blank" class="btn btn-sm btn-outline">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Personal Productivity Agent -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/productivity_agent.png" alt="Personal Productivity Agent">
+                    </div>
+                    <div class="project-content">
+                        <h3>Personal Productivity Agent</h3>
+                        <p>Windows automation tool with event log analysis and MCP client capabilities for personal productivity.</p>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>MCP</span>
+                            <span>Automation</span>
+                            <span>Windows</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="personal-productivity-agent.html" class="btn btn-sm">View Project</a>
+                            <a href="https://github.com/mwill20/PersonalProductivityAgent" target="_blank" class="btn btn-sm btn-outline">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MCP Tools Demo -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/mcp-tools-demo.png" alt="MCP Tools Demo">
+                    </div>
+                    <div class="project-content">
+                        <h3>MCP Tools Demo</h3>
+                        <p>Interactive demo showcasing various tools integrated with the Model Context Protocol.</p>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>MCP</span>
+                            <span>Gradio</span>
+                            <span>Demo</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="mcp-tools-demo.html" class="btn btn-sm">View Project</a>
+                            <a href="https://github.com/mwill20/mcp-tools" target="_blank" class="btn btn-sm btn-outline">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center" style="margin-top: 3rem;">
+                <a href="projects.html" class="btn btn-outline">View All Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="divider"></div>
+                <p class="section-description">I'm currently open to new opportunities and interesting projects</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <a href="mailto:your.email@example.com">your.email@example.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <div>
+                            <h3>GitHub</h3>
+                            <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <div>
+                            <h3>LinkedIn</h3>
+                            <a href="https://linkedin.com/in/yourusername" target="_blank">linkedin.com/in/yourusername</a>
+                        </div>
+                    </div>
+                </div>
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="#" class="logo">MW</a>
+                    <p>Building secure AI systems for a better tomorrow</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Connect</h3>
+                    <div class="social-links">
+                        <a href="https://github.com/yourusername" target="_blank" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/yourusername" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://twitter.com/yourusername" target="_blank" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Michael Williams. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <span>•</span>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
 
         .profile-container {
             display: flex;

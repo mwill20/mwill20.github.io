@@ -27,7 +27,20 @@ python -m http.server -d . 8000
 
 Then open <http://localhost:8000/>. Opening `index.html` directly from disk also works.
 
+## Validate
+
+```bash
+python validate.py
+```
+
+Checks hop order, AI meter monotonicity, the loop index, placeholder text, local assets,
+the social image size, and every outbound link. `python validate.py --self-test` proves
+the checks catch broken inputs. Run both before calling a change done.
+
 ## Editing
+
+Read [CLAUDE.md](CLAUDE.md) for the rules and [UPDATING.md](UPDATING.md) for recipes.
+[CONTENT.md](CONTENT.md) is the source of truth for the story, with provenance per fact.
 
 - Copy lives in `index.html`. Each hop is a `<section class="hop" data-hop="N">`;
   alternate the `r` class to switch sides.

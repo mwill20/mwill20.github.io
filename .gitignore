@@ -1,4 +1,13 @@
+# OS and editor
 .DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Local scratch
+*.log
+*.tmp
 node_modules/
 .env
-*.log
+.env.*

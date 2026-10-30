@@ -8,7 +8,7 @@ assistant or a reviewer can check it without asking.
 
 | Tag | Meaning |
 |---|---|
-| `[resume]` | `M_Will_Gen_Sec_Resume_Updated.docx`, 2026-10-21 |
+| `[resume]` | `M_Will_Resume.docx`, 2026-10-29 |
 | `[github]` | Verified against the GitHub API on the date noted |
 | `[michael]` | Stated by Michael in conversation; not independently verified |
 | `[claude-draft]` | Wording drafted by the assistant and approved by Michael |
@@ -91,13 +91,13 @@ Rules that apply to every hop:
 - **AI line:** adversarial. red team, guardrails, fine-tuning, evaluation harnesses. `[claude-draft]` approved
 - **Body:** I pointed the detection mindset at the models. Red-teamed chatbots and agents against OWASP LLM Top 10 and MITRE ATLAS, built guardrails that run before and after the model, and fine-tuned one that refuses to become a shell. `[claude-draft]` approved
 - **AI thread · ADVERSARIAL:** This is where curiosity turned into a practice: threat model the model, write the should-fail case first, and never let the model gate its own security decision. `[michael]`
-- **Big number (side):** 57/0 · adversarial cases thrown at the detector, none got through `[resume]`
+- **Big number (side):** 57 · adversarial and logic-bomb cases thrown at the detector `[github]` AI-DevSecOps README, 41 adversarial + 16 logic-bomb
 - **Branches:**
-  - `AI-DevSecOps` · tag: 57 adversarial cases · 0 false negatives `[resume]` · Unsafe-pattern detection in AI-generated code: deterministic controls plus LLM-assisted reasoning. `[resume]`
+  - `AI-DevSecOps` · tag: 41 adversarial + 16 logic-bomb cases `[github]` README · Unsafe-pattern detection in AI-generated code: deterministic controls plus LLM-assisted reasoning. `[resume]`
   - `LLM-Red-Teaming-Audit-Demo` · Finance chatbot and commerce agent; 16 findings mapped to OWASP LLM Top 10, with an audit trail. `[github]` portfolio description
   - `ai-guardrails` · Layered input and output validation with policy enforcement. `[github]`
   - `Trust-Bench-SecureEval-Ops` · Multi-agent security evaluation framework with consensus routing. `[github]`
-  - `SecureCLI-Tuner` · tag: 100% adversarial block rate `[github]` portfolio description · QLoRA fine-tune for natural language to Bash, three-layer runtime guardrails. `[github]`
+  - `SecureCLI-Tuner` · QLoRA fine-tune for natural language to Bash, three-layer runtime guardrails. `[github]`
 
 ## Hop 6 · 2026 · Cybersecurity engineer II, SEARHC · agents need a trust layer
 
@@ -144,3 +144,4 @@ MITRE ATT&CK · MITRE ATLAS · STRIDE · OWASP LLM Top 10 · OWASP Agentic Top 1
 |---|---|---|
 | 2026-10-21 | v1–v3 mockups; v3 wording hop by hop | Michael |
 | 2026-10-24 | Hop 2 body and AI thread reworded; mandate line added; site published | Michael |
+| 2026-10-29 | Hop 5: removed the zero-false-negatives and 100% block-rate claims; retagged to the README counts; resume provenance updated | Michael |
